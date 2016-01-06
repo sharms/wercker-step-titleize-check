@@ -8,5 +8,5 @@ This step will use the [titleize gem](https://github.com/granth/titleize) to sca
 box: wercker/default
 build:
   steps:
-    - sharms/titleize-test@1.0.1
+    - sharms/wercker-step-titleize-check@1.0.2
 ```
