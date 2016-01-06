@@ -1,6 +1,3 @@
-#!/bin/bash
-
-LATEST_TITLEIZE_VERSION=1.0.0
 hash ruby 2>/dev/null || { echo "Ruby is required, but not installed. Aborting..." >&2; exit 1; }
 
 ruby_version=`ruby -v`
@@ -14,6 +11,6 @@ else
 fi
 
 gem install titleize $no_doc
-gem install optparse $no_doc
 
 ruby ./title-checker.rb $WERCKER_TITLEIZER_CHECK_BASEDIR $WERCKER_TITLEIZER_CHECK_VERBOSE
+
