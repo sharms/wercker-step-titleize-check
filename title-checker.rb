@@ -2,7 +2,7 @@
 require 'titleize'
 require 'optparse'
 
-options = { verbose: true, basedir: "./" }
+options = { verbose: false, basedir: "./" }
 blacklist = ["apt-get", "FISMA"]
 
 OptionParser.new do |opts|
@@ -27,7 +27,7 @@ errors = false
 
 Dir.glob(options[:basedir] + "**/*.md") do |docfile|
        	if options[:verbose]
-		puts "Scanning #{docfile}".titleize
+		puts "Scanning #{docfile}"
 	end
 	contents = File.read(docfile)
 
@@ -41,8 +41,9 @@ Dir.glob(options[:basedir] + "**/*.md") do |docfile|
 			end
 
 			if (original_title.strip != titleized.strip)
-				puts "Original: #{original_title}"
-				puts "Corrected: #{titleized}"
+				puts "ERROR in #{docfile}"
+				puts "Incorrect title found: #{original_title}"
+				puts "Suggested title: #{titleized}"
 				errors = true
 			end
 		end
