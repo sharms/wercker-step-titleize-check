@@ -1,3 +1,7 @@
+if [ -z "$WERCKER_TITLEIZER_TEST_BASEDIR" ]; then
+	WERCKER_TITLEIZER_TEST_BASEDIR="-b ${WERCKER_SOURCE_DIR}"
+fi
+
 hash ruby 2>/dev/null || { echo "Ruby is required, but not installed. Aborting..." >&2; exit 1; }
 
 ruby_version=`ruby -v`
@@ -12,5 +16,4 @@ fi
 
 gem install titleize $no_doc
 
-ruby ./title-checker.rb $WERCKER_TITLEIZER_CHECK_BASEDIR $WERCKER_TITLEIZER_CHECK_VERBOSE
-
+$WERCKER_STEP_ROOT ./title-checker.rb $WERCKER_TITLEIZER_TEST_BASEDIR $WERCKER_TITLEIZER_TEST_VERBOSE
