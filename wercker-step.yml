@@ -1,12 +1,12 @@
 name: wercker-step-titleize-check
-version: 1.0.0
+version: 1.0.1
 description: |
     Downloads the titleize gem and runs it against Markdown files.
 type: build
 properties:
     version:
         type: string
-        default: "1.0.0"
+        default: "1.0.1"
     basedir:
         type: string
         default: ""
