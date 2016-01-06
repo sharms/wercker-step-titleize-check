@@ -1,4 +1,0 @@
-box: ubuntu:14.04
-build:
-  steps:
-    - validate-wercker-step
