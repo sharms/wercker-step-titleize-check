@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 LATEST_TITLEIZE_VERSION=1.0.0
 hash ruby 2>/dev/null || { echo "Ruby is required, but not installed. Aborting..." >&2; exit 1; }
