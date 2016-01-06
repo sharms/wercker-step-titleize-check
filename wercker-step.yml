@@ -1,0 +1,17 @@
+name: titleize-test
+version: 1.0.0
+description: |
+    Downloads the titleize gem and runs it against Markdown files.
+type: build
+properties:
+    version:
+        type: string
+        default: "1.0.0"
+    basedir:
+        type: string
+        default: ""
+        required: false
+    verbose:
+        type: string
+        default: "--verbose"
+        required: false
