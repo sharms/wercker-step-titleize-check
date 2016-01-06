@@ -1,4 +1,4 @@
-name: titleize-test
+name: wercker-step-titleize-check
 version: 1.0.0
 description: |
     Downloads the titleize gem and runs it against Markdown files.
