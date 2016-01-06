@@ -14,4 +14,6 @@ else
 fi
 
 gem install titleize $no_doc
+gem install optparse $no_doc
+
 ruby ./title-checker.rb $WERCKER_TITLEIZER_CHECK_BASEDIR $WERCKER_TITLEIZER_CHECK_VERBOSE
